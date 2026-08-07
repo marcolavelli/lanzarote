@@ -187,6 +187,9 @@
         { name: "Yaiza",                    lat: 28.9542, lng: -13.7667, day: "Giorno 11",     desc: "Villaggio bianco curatissimo.",             area: "south" },
         { name: "Punta Papagayo",           lat: 28.8443, lng: -13.7857, day: "Giorno 11",     desc: "Calette turchesi.",                         area: "south" },
         { name: "Porto Fuerteventura",      lat: 28.8624, lng: -13.8322, day: "Giorno 12",     desc: "Traghetto per Corralejo.",                  area: "south" },
+        { name: "Corralejo (Fuerteventura)",lat: 28.7360, lng: -13.8670, day: "Giorno 12",     desc: "Centro cittadino e noleggio.",              area: "south" },
+        { name: "Pop Corn Beach",           lat: 28.7431, lng: -13.8966, day: "Giorno 12",     desc: "Playa del Bajo de la Burra.",               area: "south" },
+        { name: "Dune di Corralejo",        lat: 28.6946, lng: -13.8436, day: "Giorno 12",     desc: "Parco Naturale e deserto di sabbia.",       area: "south" },
         { name: "Fond. C. Manrique",        lat: 29.0033, lng: -13.5489, day: "Giorno 13",     desc: "Casa museo su bolle vulcaniche.",           area: "center" },
         { name: "Salinas de Janubio",       lat: 28.9372, lng: -13.8247, day: "Giorno 13",     desc: "Saline antiche al tramonto.",               area: "south" }
     ];
@@ -209,7 +212,7 @@
         tenesar:  [29.0683, -13.7143], arrecife:  [28.9626, -13.5515],
         calero:   [28.9167, -13.7042],
         yaiza:    [28.9542, -13.7667], papagayo:  [28.8443, -13.7857], pblanca:  [28.8654, -13.8291],
-        pblancaP: [28.8624, -13.8322],
+        pblancaP: [28.8624, -13.8322], corralejo: [28.7360, -13.8670], popcorn:  [28.7431, -13.8966], dune: [28.6946, -13.8436],
         tahiche:  [29.0033, -13.5489], salinas:   [28.9372, -13.8247]
     };
 
@@ -225,7 +228,7 @@
         "9":  [HOME, WP.tenesar, WP.arrecife, HOME],
         "10": [HOME, WP.calero, HOME],
         "11": [HOME, WP.yaiza, WP.papagayo, WP.pblanca, HOME],
-        "12": [HOME, WP.pblancaP, HOME],
+        "12": [HOME, WP.pblancaP, WP.corralejo, WP.popcorn, WP.dune, WP.corralejo, WP.pblancaP, HOME],
         "13": [HOME, WP.tahiche, WP.salinas, HOME],
         "14": [HOME, WP.haria, HOME],
         "15": [HOME, WP.airport]
@@ -380,7 +383,7 @@
                 showAlternatives: false,
                 lineOptions: { styles: [{ color: '#1e3a5f', weight: 6, opacity: 0.85 }] },
                 createMarker: () => null,
-                show: true,
+                show: false,
                 language: 'it'
             }).addTo(mapInstance);
         } else {
