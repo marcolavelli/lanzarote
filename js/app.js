@@ -281,6 +281,73 @@
         listContainer.appendChild(card);
     });
 
+    // --- SEARCH LOGIC ---
+    const searchInput  = document.getElementById('itinerary-search');
+    const searchClear  = document.getElementById('search-clear');
+    const searchCount  = document.getElementById('search-count');
+    const noResults    = document.getElementById('no-results');
+    const allCards     = listContainer.querySelectorAll('.card');
+
+    // Store original inner HTML for each card (to restore highlights)
+    const originals = Array.from(allCards).map(c => c.innerHTML);
+
+    function highlight(text, query) {
+        if (!query) return text;
+        const escaped = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+        return text.replace(new RegExp(`(${escaped})`, 'gi'), '<mark>$1</mark>');
+    }
+
+    function applySearch(query) {
+        const q = query.trim().toLowerCase();
+        let visible = 0;
+
+        allCards.forEach((card, i) => {
+            // Restore original (no highlights)
+            card.innerHTML = originals[i];
+
+            if (!q) {
+                card.style.display = '';
+                visible++;
+                return;
+            }
+
+            // Build a searchable text from the card's text content
+            const text = card.textContent.toLowerCase();
+            if (text.includes(q)) {
+                card.style.display = '';
+                // Apply highlight on inner HTML
+                card.innerHTML = highlight(originals[i], query.trim());
+                visible++;
+            } else {
+                card.style.display = 'none';
+            }
+        });
+
+        // Update count and no-results
+        if (q) {
+            searchCount.textContent = visible === 0
+                ? 'Nessun risultato'
+                : `${visible} giorn${visible === 1 ? 'o' : 'i'} trovati`;
+        } else {
+            searchCount.textContent = '';
+        }
+        noResults.style.display = (q && visible === 0) ? 'flex' : 'none';
+    }
+
+    searchInput.addEventListener('input', () => {
+        const q = searchInput.value;
+        searchClear.classList.toggle('visible', q.length > 0);
+        applySearch(q);
+    });
+
+    searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        searchClear.classList.remove('visible');
+        searchCount.textContent = '';
+        applySearch('');
+        searchInput.focus();
+    });
+
     // --- MAP SELECT OPTIONS ---
     const select = document.getElementById('day-select');
     
