@@ -45,8 +45,25 @@
         
         <!-- VIEW: Itinerary -->
         <div id="view-itinerary" class="view active">
+            <div class="search-bar-container">
+                <div class="search-bar-wrap">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="search" id="itinerary-search" class="search-input"
+                           placeholder="Cerca luogo, attività, nota…"
+                           autocomplete="off" autocorrect="off" spellcheck="false">
+                    <button class="search-clear" id="search-clear" aria-label="Cancella">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+                <p class="search-results-count" id="search-count"></p>
+            </div>
             <div class="itinerary-list" id="itinerary-list">
                 <!-- Cards injected by JS -->
+            </div>
+            <div class="no-results" id="no-results" style="display:none">
+                <i class="fa-solid fa-compass"></i>
+                <p>Nessun risultato trovato</p>
+                <small>Prova con un termine diverso</small>
             </div>
             <div class="footer-spacer"></div>
         </div>
