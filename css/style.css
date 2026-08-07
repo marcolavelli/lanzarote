@@ -161,7 +161,7 @@ body, html {
     box-shadow: var(--shadow-sm);
 }
 
-/* Colored left accent bar (area-based) */
+/* Colored left accent bar (day-based) */
 .card::before {
     content: '';
     position: absolute;
@@ -170,12 +170,21 @@ body, html {
     border-radius: var(--radius) 0 0 var(--radius);
 }
 
-.card[data-area="north"]::before    { background: var(--area-north); }
-.card[data-area="west"]::before     { background: var(--area-west); }
-.card[data-area="south"]::before    { background: var(--area-south); }
-.card[data-area="center"]::before   { background: var(--area-center); }
-.card[data-area="graciosa"]::before { background: var(--area-graciosa); }
-.card[data-area="airport"]::before  { background: var(--area-airport); }
+.card[data-day="1"]::before, .card[data-day="1"] .card-day { background: #3b82f6; } /* Blue */
+.card[data-day="2"]::before, .card[data-day="2"] .card-day { background: #8b5cf6; } /* Violet */
+.card[data-day="3"]::before, .card[data-day="3"] .card-day { background: #ec4899; } /* Pink */
+.card[data-day="4"]::before, .card[data-day="4"] .card-day { background: #f43f5e; } /* Rose */
+.card[data-day="5"]::before, .card[data-day="5"] .card-day { background: #f97316; } /* Orange */
+.card[data-day="6"]::before, .card[data-day="6"] .card-day { background: #eab308; } /* Yellow */
+.card[data-day="7"]::before, .card[data-day="7"] .card-day { background: #84cc16; } /* Lime */
+.card[data-day="8"]::before, .card[data-day="8"] .card-day { background: #22c55e; } /* Green */
+.card[data-day="9"]::before, .card[data-day="9"] .card-day { background: #10b981; } /* Emerald */
+.card[data-day="10"]::before, .card[data-day="10"] .card-day { background: #14b8a6; } /* Teal */
+.card[data-day="11"]::before, .card[data-day="11"] .card-day { background: #06b6d4; } /* Cyan */
+.card[data-day="12"]::before, .card[data-day="12"] .card-day { background: #0ea5e9; } /* Sky */
+.card[data-day="13"]::before, .card[data-day="13"] .card-day { background: #6366f1; } /* Indigo */
+.card[data-day="14"]::before, .card[data-day="14"] .card-day { background: #a855f7; } /* Purple */
+.card[data-day="15"]::before, .card[data-day="15"] .card-day { background: #ef4444; } /* Red */
 
 .card-header {
     display: flex;
@@ -193,13 +202,6 @@ body, html {
     border-radius: 20px;
     color: white;
 }
-
-.card[data-area="north"] .card-day    { background: var(--area-north); }
-.card[data-area="west"] .card-day     { background: var(--area-west); }
-.card[data-area="south"] .card-day    { background: var(--area-south); }
-.card[data-area="center"] .card-day   { background: var(--area-center); }
-.card[data-area="graciosa"] .card-day { background: var(--area-graciosa); }
-.card[data-area="airport"] .card-day  { background: var(--area-airport); }
 
 .card-date {
     color: var(--text-secondary);
