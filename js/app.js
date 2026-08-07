@@ -36,7 +36,7 @@
     // --- ITINERARY DATA ---
     const itineraryData = [
         {
-            dayNum: "1", date: "16 Ago (Sab)", area: "airport",
+            dayNum: "1", date: "16 Ago (Dom)", area: "airport",
             title: "✈️ ARRIVO A LANZAROTE",
             morning: { title: "Atterraggio e Arrivo", desc: "Atterraggio ore 17:50 all'Aeroporto ACE. Ritiro bagagli e noleggio auto CICAR. Transfer verso Costa Teguise (~25 min)." },
             afternoon: { title: "Primo tuffo al tramonto", desc: "Passeggiata verso Spiaggia El Jablillo o Playa Bastián. Esplorazione del Pueblo Marinero." },
@@ -44,7 +44,7 @@
             note: "Ritiro auto CICAR: patente + CC. Fare il pieno in zona aeroporto. Supermercato vicino per prima spesa."
         },
         {
-            dayNum: "2", date: "17 Ago (Dom)", area: "north",
+            dayNum: "2", date: "17 Ago (Lun)", area: "north",
             title: "🌋 JAMEOS DEL AGUA & CUEVA DE LOS VERDES",
             morning: { title: "Grotte Vulcaniche", desc: "Partenza ore 09:30. Cueva de los Verdes: tunnel vulcanico spettacolare. A seguire Jameos del Agua: grotta trasformata da Manrique." },
             afternoon: { title: "Condotti di Lava & Arrieta", desc: "Esplorazione dei bufaderos e condotti di lava di Mala. Poi Playa de la Garita ad Arrieta per bagno e snorkeling." },
@@ -52,7 +52,7 @@
             note: "Jameos e Cueva: biglietto combo disponibile. Arrieta è a 5 min da Jameos."
         },
         {
-            dayNum: "3", date: "18 Ago (Lun)", area: "west",
+            dayNum: "3", date: "18 Ago (Mar)", area: "west",
             title: "🔥 TIMANFAYA E COSTA OVEST",
             morning: { title: "Parco Timanfaya (PRENOTATO 09:30)", desc: "Ingresso confermato 09:30. Tour Montañas del Fuego col bus del parco. Arrivare 15 min prima." },
             afternoon: { title: "El Golfo, Lago Verde & Los Hervideros", desc: "Lago verde vulcanico, scogliere laviche battute dall'oceano." },
@@ -60,7 +60,7 @@
             note: "⚠️ Timanfaya PRENOTATO! Charco de los Clicos: sentiero sud è spettacolare."
         },
         {
-            dayNum: "4", date: "19 Ago (Mar)", area: "center",
+            dayNum: "4", date: "19 Ago (Mer)", area: "center",
             title: "🍷 VULCANI E VINI",
             morning: { title: "Las Grietas & La Geria", desc: "Esplorazione di Las Grietas (sulla LZ-35). A seguire La Geria: viti nei crateri. Degustazione in Bodega (es. El Grifo)." },
             afternoon: { title: "Puerto del Carmen", desc: "Relax nella spiaggia più lunga dell'isola (4 km). Lungomare animato, gelato artigianale." },
@@ -68,7 +68,7 @@
             note: "Las Grietas: parcheggio bordo strada. Bodegas: prenotare degustazione online (~15€)."
         },
         {
-            dayNum: "5", date: "20 Ago (Mer)", area: "graciosa",
+            dayNum: "5", date: "20 Ago (Gio)", area: "graciosa",
             title: "🏖️ ESCURSIONE ISLA GRACIOSA",
             morning: { title: "Traghetto e Bici", desc: "Partenza 07:30 verso Órzola. Traghetto Líneas Romero (25 min). Noleggio bici a Caleta de Sebo." },
             afternoon: { title: "Playa de las Conchas", desc: "Spiaggia paradisiaca (sabbia dorata, acqua turchese). Attenzione alle forti correnti!" },
@@ -76,7 +76,7 @@
             note: "Traghetti: lineasromero.com, prenotare in anticipo! Portare contanti, acqua, scarpe chiuse."
         },
         {
-            dayNum: "6", date: "21 Ago (Gio)", area: "north",
+            dayNum: "6", date: "21 Ago (Ven)", area: "north",
             title: "🌵 JARDÍN DE CACTUS & FAMARA",
             morning: { title: "Cactus e Città Stratificata", desc: "Jardín de Cactus a Guatiza (opera di Manrique). Poi Rofera de Teseguite, paesaggio astratto di roccia." },
             afternoon: { title: "Playa de Famara al tramonto", desc: "Spiaggia immensa e selvaggia ai piedi delle scogliere. Ideale per surf e tramonto favoloso." },
@@ -84,7 +84,7 @@
             note: "Rofera: esplorare a piedi le formazioni. Famara: attenzione correnti."
         },
         {
-            dayNum: "7", date: "22 Ago (Ven)", area: "north",
+            dayNum: "7", date: "22 Ago (Sab)", area: "north",
             title: "⛰️ NORD E HARÍA",
             morning: { title: "Mercato di Haría & Trekking", desc: "Sabato mattina: Mercatino artigianale di Haría. Discesa nel cratere del Volcán de la Corona." },
             afternoon: { title: "Mirador del Río", desc: "Vista sull'arcipelago Chinijo dal Mirador (475m). Bagno alle calette di Orzola." },
@@ -92,7 +92,7 @@
             note: "Trekking Volcán Corona: scarpe robuste. Mirador del Río chiude alle 17:45."
         },
         {
-            dayNum: "8", date: "23 Ago (Sab)", area: "center",
+            dayNum: "8", date: "23 Ago (Dom)", area: "center",
             title: "🎪 MERCATO DI TEGUISE",
             morning: { title: "L'Antica Capitale", desc: "Il grande mercato artigianale di Teguise (9-14). Plaza de la Constitución e Iglesia." },
             afternoon: { title: "Pranzo Teleclub & Relax", desc: "Pranzo al Teleclub de Tao o Mozaga. Pomeriggio relax a Playa de las Cucharas." },
@@ -100,7 +100,7 @@
             note: "Teguise: parcheggio a pagamento. Teleclub: prezzi ottimi. Portare contanti."
         },
         {
-            dayNum: "9", date: "24 Ago (Dom)", area: "west",
+            dayNum: "9", date: "24 Ago (Lun)", area: "west",
             title: "🌊 TENESAR E ARRECIFE",
             morning: { title: "Tenesar: Villaggio Dimenticato", desc: "Costa nord-ovest frastagliata. Tenesar è isolato tra lava e onde furiose." },
             afternoon: { title: "Arrecife & Charco de San Ginés", desc: "Castillo San Gabriel. Passeggiata nella laguna cittadina (Charco)." },
@@ -108,7 +108,7 @@
             note: "Tenesar: NON balneabile, onde pericolose. Arrecife: parcheggio sul lungomare."
         },
         {
-            dayNum: "10", date: "25 Ago (Lun)", area: "center",
+            dayNum: "10", date: "25 Ago (Mar)", area: "center",
             title: "🚤 SAFARI A PUERTO CALERO",
             morning: { title: "Safari in mare (PRENOTATO 09:00)", desc: "Esperienza di Safari in mare alle 09:00 a Puerto Calero. Arrivare con anticipo al molo." },
             afternoon: { title: "Relax a Puerto Calero", desc: "Pranzo al porticciolo. Calette di Playa Quemada (spiaggia nera vulcanica)." },
@@ -116,7 +116,7 @@
             note: "⚠️ Safari PRENOTATO! Parcheggio comodo vicino al porto turistico."
         },
         {
-            dayNum: "11", date: "26 Ago (Mar)", area: "south",
+            dayNum: "11", date: "26 Ago (Mer)", area: "south",
             title: "🏝️ SUD DELL'ISOLA E PAPAGAYO",
             morning: { title: "Yaiza & Faro Pechiguera", desc: "Mattina a Yaiza (villaggio bianco curatissimo). Passeggiata fino al faro." },
             afternoon: { title: "Punta Papagayo", desc: "Riserva naturale. Calette turchesi perfette per snorkeling (Playa Mujeres, Papagayo)." },
@@ -124,7 +124,7 @@
             note: "Papagayo: 3€ a veicolo. Strada sterrata. Arrivare presto."
         },
         {
-            dayNum: "12", date: "27 Ago (Mer)", area: "south",
+            dayNum: "12", date: "27 Ago (Gio)", area: "south",
             title: "⛴️ ESCURSIONE A FUERTEVENTURA",
             morning: { title: "Traghetto da Playa Blanca", desc: "Partenza 07:00 verso sud. Traghetto per Corralejo (~35 min). Visita centro cittadino." },
             afternoon: { title: "Dune di Corralejo & Pop Corn Beach", desc: "Parco Naturale Dune: deserto bianco. Bagno alle Grandes Playas. Playa del Bajo de la Burra." },
@@ -132,7 +132,7 @@
             note: "Portare Documento di Identità valido per il traghetto!"
         },
         {
-            dayNum: "13", date: "28 Ago (Gio)", area: "center",
+            dayNum: "13", date: "28 Ago (Ven)", area: "center",
             title: "🎨 CÉSAR MANRIQUE & SALINE",
             morning: { title: "Fondazione & Monumento Campesino", desc: "Fondazione César Manrique (Tahiche), casa costruita in bolle vulcaniche." },
             afternoon: { title: "Salinas de Janubio al tramonto", desc: "Grandi saline, scacchiera di colori. Uno dei tramonti più fotogenici dell'isola." },
@@ -140,7 +140,7 @@
             note: "Fondazione Manrique: ~10€. Saline ottime per foto nell'ora d'oro."
         },
         {
-            dayNum: "14", date: "29 Ago (Ven)", area: "north",
+            dayNum: "14", date: "29 Ago (Sab)", area: "north",
             title: "🌴 VALLE DELLE PALME E SOUVENIR",
             morning: { title: "Ultima esplorazione Nord", desc: "Casa-Museo di Manrique (Haría) o paesini interni (Tiagua, Soo)." },
             afternoon: { title: "Ultimo mare", desc: "Caletta preferita: Famara per paesaggio, Arrieta per tranquillità, o Papagayo." },
@@ -148,7 +148,7 @@
             note: "Fare il pieno per riconsegnare l'auto domani. Preparare i bagagli!"
         },
         {
-            dayNum: "15", date: "30 Ago (Sab)", area: "airport",
+            dayNum: "15", date: "30 Ago (Dom)", area: "airport",
             title: "✈️ PARTENZA",
             morning: { title: "Check-out", desc: "Sveglia ore 07:00, colazione, ultime foto. Check-out entro le 11:00." },
             afternoon: { title: "Arrivederci Lanzarote!", desc: "Consegna auto CICAR in aeroporto. Arrivo max ore 15:55. Volo ore 18:25." },
@@ -240,7 +240,7 @@
     itineraryData.forEach((day, idx) => {
         const card = document.createElement('div');
         card.className = 'card';
-        card.setAttribute('data-area', day.area);
+        card.setAttribute('data-day', day.dayNum);
         card.style.animationDelay = (idx * 0.05) + 's';
         card.innerHTML = `
             <div class="card-header">
