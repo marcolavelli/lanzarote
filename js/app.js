@@ -161,42 +161,46 @@
     const HOME = [28.9959, -13.4921]; // Costa Teguise
 
     const mapLocations = [
-        { name: "Aeroporto ACE",           lat: 28.9455, lng: -13.6052, day: "Giorno 1 & 15", desc: "Arrivo e ripartenza. Ritiro auto CICAR.", area: "airport" },
-        { name: "Alloggio: Costa Teguise",  lat: 28.9959, lng: -13.4921, day: "Base",          desc: "Il tuo appartamento.",                    area: "home" },
-        { name: "Jameos del Agua",          lat: 29.1610, lng: -13.4310, day: "Giorno 2",      desc: "Grotta vulcanica di Manrique.",            area: "north" },
-        { name: "Cueva de los Verdes",      lat: 29.1614, lng: -13.4388, day: "Giorno 2",      desc: "Tunnel vulcanico di 1.5 km.",              area: "north" },
-        { name: "Arrieta & Mala",           lat: 29.1433, lng: -13.4600, day: "Giorno 2",      desc: "Pranzo pesce, bufaderos di Mala.",         area: "north" },
-        { name: "P.N. Timanfaya",           lat: 29.0033, lng: -13.7547, day: "Giorno 3",      desc: "PRENOTATO 09:30. Montañas del Fuego.",     area: "west" },
-        { name: "El Golfo & Clicos",        lat: 28.9818, lng: -13.8290, day: "Giorno 3",      desc: "Il famoso lago verde vulcanico.",           area: "west" },
-        { name: "Los Hervideros",           lat: 28.9531, lng: -13.8344, day: "Giorno 3",      desc: "Scogliere laviche frastagliate.",           area: "west" },
-        { name: "La Geria (Vigneti)",       lat: 28.9749, lng: -13.7153, day: "Giorno 4",      desc: "Degustazione Malvasia nei crateri.",        area: "center" },
-        { name: "Las Grietas",              lat: 28.9723, lng: -13.6288, day: "Giorno 4",      desc: "Canyon lavici spettacolari.",               area: "center" },
-        { name: "Puerto del Carmen",        lat: 28.9221, lng: -13.6521, day: "Giorno 4",      desc: "Playa Matagorda e lungomare.",              area: "center" },
-        { name: "Órzola (Graciosa)",        lat: 29.2235, lng: -13.4542, day: "Giorno 5",      desc: "Partenza traghetto.",                       area: "graciosa" },
-        { name: "Jardín de Cactus",         lat: 29.0805, lng: -13.4795, day: "Giorno 6",      desc: "Ultima opera di Manrique.",                 area: "north" },
-        { name: "Rofera de Teseguite",      lat: 29.0494, lng: -13.5226, day: "Giorno 6",      desc: "'Città Stratificata'.",                     area: "north" },
-        { name: "Playa de Famara",          lat: 29.1171, lng: -13.5658, day: "Giorno 6",      desc: "Spiaggia immensa e tramonto.",              area: "west" },
-        { name: "Haría",                    lat: 29.1466, lng: -13.4990, day: "Giorno 7 & 14", desc: "Mercatino artigianale.",                    area: "north" },
-        { name: "Volcán de la Corona",      lat: 29.1820, lng: -13.4930, day: "Giorno 7",      desc: "Trekking fino al cratere.",                 area: "north" },
-        { name: "Mirador del Río",          lat: 29.2144, lng: -13.4816, day: "Giorno 7",      desc: "Panorama su La Graciosa (475m).",           area: "north" },
-        { name: "Villa de Teguise",         lat: 29.0594, lng: -13.5599, day: "Giorno 8",      desc: "L'antica capitale e il Mercato.",           area: "center" },
-        { name: "Tenesar",                  lat: 29.0683, lng: -13.7143, day: "Giorno 9",      desc: "Villaggio isolato tra lava.",               area: "west" },
-        { name: "Arrecife",                 lat: 28.9626, lng: -13.5515, day: "Giorno 9",      desc: "La capitale: Castillo e Charco.",           area: "center" },
-        { name: "Safari Puerto Calero",     lat: 28.9167, lng: -13.7042, day: "Giorno 10",     desc: "PRENOTATO 09:00. Safari in mare.",          area: "center" },
-        { name: "Playa Blanca",             lat: 28.8654, lng: -13.8291, day: "Giorno 11",     desc: "Sud dell'isola.",                           area: "south" },
-        { name: "Yaiza",                    lat: 28.9542, lng: -13.7667, day: "Giorno 11",     desc: "Villaggio bianco curatissimo.",             area: "south" },
-        { name: "Punta Papagayo",           lat: 28.8443, lng: -13.7857, day: "Giorno 11",     desc: "Calette turchesi.",                         area: "south" },
-        { name: "Porto Fuerteventura",      lat: 28.8624, lng: -13.8322, day: "Giorno 12",     desc: "Traghetto per Corralejo.",                  area: "south" },
-        { name: "Corralejo (Fuerteventura)",lat: 28.7360, lng: -13.8670, day: "Giorno 12",     desc: "Centro cittadino e noleggio.",              area: "south" },
-        { name: "Pop Corn Beach",           lat: 28.7431, lng: -13.8966, day: "Giorno 12",     desc: "Playa del Bajo de la Burra.",               area: "south" },
-        { name: "Dune di Corralejo",        lat: 28.6946, lng: -13.8436, day: "Giorno 12",     desc: "Parco Naturale e deserto di sabbia.",       area: "south" },
-        { name: "Fond. C. Manrique",        lat: 29.0033, lng: -13.5489, day: "Giorno 13",     desc: "Casa museo su bolle vulcaniche.",           area: "center" },
-        { name: "Salinas de Janubio",       lat: 28.9372, lng: -13.8247, day: "Giorno 13",     desc: "Saline antiche al tramonto.",               area: "south" }
+        { name: "Aeroporto ACE",           lat: 28.9455, lng: -13.6052, day: "Giorno 1 & 15", desc: "Arrivo e ripartenza. Ritiro auto CICAR.",  dayNum: "1" },
+        { name: "Alloggio: Costa Teguise",  lat: 28.9959, lng: -13.4921, day: "Base",          desc: "Il tuo appartamento.",                     dayNum: "0" },
+        { name: "Jameos del Agua",          lat: 29.1610, lng: -13.4310, day: "Giorno 2",      desc: "Grotta vulcanica di Manrique.",             dayNum: "2" },
+        { name: "Cueva de los Verdes",      lat: 29.1614, lng: -13.4388, day: "Giorno 2",      desc: "Tunnel vulcanico di 1.5 km.",               dayNum: "2" },
+        { name: "Arrieta & Mala",           lat: 29.1433, lng: -13.4600, day: "Giorno 2",      desc: "Pranzo pesce, bufaderos di Mala.",          dayNum: "2" },
+        { name: "P.N. Timanfaya",           lat: 29.0033, lng: -13.7547, day: "Giorno 3",      desc: "PRENOTATO 09:30. Montañas del Fuego.",      dayNum: "3" },
+        { name: "El Golfo & Clicos",        lat: 28.9818, lng: -13.8290, day: "Giorno 3",      desc: "Il famoso lago verde vulcanico.",            dayNum: "3" },
+        { name: "Los Hervideros",           lat: 28.9531, lng: -13.8344, day: "Giorno 3",      desc: "Scogliere laviche frastagliate.",            dayNum: "3" },
+        { name: "La Geria (Vigneti)",       lat: 28.9749, lng: -13.7153, day: "Giorno 4",      desc: "Degustazione Malvasia nei crateri.",         dayNum: "4" },
+        { name: "Las Grietas",              lat: 28.9723, lng: -13.6288, day: "Giorno 4",      desc: "Canyon lavici spettacolari.",                dayNum: "4" },
+        { name: "Puerto del Carmen",        lat: 28.9221, lng: -13.6521, day: "Giorno 4",      desc: "Playa Matagorda e lungomare.",               dayNum: "4" },
+        { name: "Órzola (Graciosa)",        lat: 29.2235, lng: -13.4542, day: "Giorno 5",      desc: "Partenza traghetto.",                        dayNum: "5" },
+        { name: "Jardín de Cactus",         lat: 29.0805, lng: -13.4795, day: "Giorno 6",      desc: "Ultima opera di Manrique.",                  dayNum: "6" },
+        { name: "Rofera de Teseguite",      lat: 29.0494, lng: -13.5226, day: "Giorno 6",      desc: "'Città Stratificata'.",                      dayNum: "6" },
+        { name: "Playa de Famara",          lat: 29.1171, lng: -13.5658, day: "Giorno 6",      desc: "Spiaggia immensa e tramonto.",               dayNum: "6" },
+        { name: "Haría",                    lat: 29.1466, lng: -13.4990, day: "Giorno 7 & 14", desc: "Mercatino artigianale.",                     dayNum: "7" },
+        { name: "Volcán de la Corona",      lat: 29.1820, lng: -13.4930, day: "Giorno 7",      desc: "Trekking fino al cratere.",                  dayNum: "7" },
+        { name: "Mirador del Río",          lat: 29.2144, lng: -13.4816, day: "Giorno 7",      desc: "Panorama su La Graciosa (475m).",            dayNum: "7" },
+        { name: "Villa de Teguise",         lat: 29.0594, lng: -13.5599, day: "Giorno 8",      desc: "L'antica capitale e il Mercato.",            dayNum: "8" },
+        { name: "Tenesar",                  lat: 29.0683, lng: -13.7143, day: "Giorno 9",      desc: "Villaggio isolato tra lava.",                dayNum: "9" },
+        { name: "Arrecife",                 lat: 28.9626, lng: -13.5515, day: "Giorno 9",      desc: "La capitale: Castillo e Charco.",            dayNum: "9" },
+        { name: "Safari Puerto Calero",     lat: 28.9167, lng: -13.7042, day: "Giorno 10",     desc: "PRENOTATO 09:00. Safari in mare.",           dayNum: "10" },
+        { name: "Playa Blanca",             lat: 28.8654, lng: -13.8291, day: "Giorno 11",     desc: "Sud dell'isola.",                            dayNum: "11" },
+        { name: "Yaiza",                    lat: 28.9542, lng: -13.7667, day: "Giorno 11",     desc: "Villaggio bianco curatissimo.",              dayNum: "11" },
+        { name: "Punta Papagayo",           lat: 28.8443, lng: -13.7857, day: "Giorno 11",     desc: "Calette turchesi.",                          dayNum: "11" },
+        { name: "Porto Fuerteventura",      lat: 28.8624, lng: -13.8322, day: "Giorno 12",     desc: "Traghetto per Corralejo.",                   dayNum: "12" },
+        { name: "Corralejo (Fuerteventura)",lat: 28.7360, lng: -13.8670, day: "Giorno 12",     desc: "Centro cittadino e noleggio.",               dayNum: "12" },
+        { name: "Pop Corn Beach",           lat: 28.7431, lng: -13.8966, day: "Giorno 12",     desc: "Playa del Bajo de la Burra.",                dayNum: "12" },
+        { name: "Dune di Corralejo",        lat: 28.6946, lng: -13.8436, day: "Giorno 12",     desc: "Parco Naturale e deserto di sabbia.",        dayNum: "12" },
+        { name: "Fond. C. Manrique",        lat: 29.0033, lng: -13.5489, day: "Giorno 13",     desc: "Casa museo su bolle vulcaniche.",            dayNum: "13" },
+        { name: "Salinas de Janubio",       lat: 28.9372, lng: -13.8247, day: "Giorno 13",     desc: "Saline antiche al tramonto.",                dayNum: "13" }
     ];
 
-    const AREA_COLORS = {
-        home: 'red', airport: 'grey', north: 'green',
-        west: 'orange', south: 'gold', center: 'blue', graciosa: 'violet'
+    // 15 colori distinti per giorno (stesso ordine del CSS)
+    const DAY_COLORS = {
+        "0":  "#e74c3c", // Home: rosso speciale
+        "1":  "#3b82f6", "2":  "#8b5cf6", "3":  "#ec4899", "4":  "#f43f5e",
+        "5":  "#f97316", "6":  "#eab308", "7":  "#84cc16", "8":  "#22c55e",
+        "9":  "#10b981", "10": "#14b8a6", "11": "#06b6d4", "12": "#0ea5e9",
+        "13": "#6366f1", "14": "#a855f7", "15": "#ef4444"
     };
 
     // Waypoints for daily routes
@@ -324,11 +328,17 @@
     let markers = [];
 
     function createIcon(color) {
-        return L.icon({
-            iconUrl: 'https://raw.githubusercontent.com/pointhi/leaflet-color-markers/master/img/marker-icon-2x-' + color + '.png',
-            shadowUrl: 'https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/images/marker-shadow.png',
-            iconSize: [25, 41], iconAnchor: [12, 41],
-            popupAnchor: [1, -34], shadowSize: [41, 41]
+        const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 36" width="28" height="40">
+            <path d="M12 0C5.37 0 0 5.37 0 12c0 9 12 24 12 24s12-15 12-24C24 5.37 18.63 0 12 0z"
+                  fill="${color}" stroke="rgba(0,0,0,0.25)" stroke-width="1"/>
+            <circle cx="12" cy="12" r="5" fill="white" opacity="0.9"/>
+        </svg>`;
+        return L.divIcon({
+            html: svg,
+            className: '',
+            iconSize: [28, 40],
+            iconAnchor: [14, 40],
+            popupAnchor: [0, -38]
         });
     }
 
@@ -345,7 +355,8 @@
 
         // Place markers
         mapLocations.forEach(loc => {
-            const icon = createIcon(AREA_COLORS[loc.area] || 'blue');
+            const color = DAY_COLORS[loc.dayNum] || '#3b82f6';
+            const icon = createIcon(color);
             const marker = L.marker([loc.lat, loc.lng], { icon: icon }).addTo(mapInstance);
 
             const gmapsLink = `https://www.google.com/maps/dir/?api=1&origin=${HOME[0]},${HOME[1]}&destination=${loc.lat},${loc.lng}&travelmode=driving`;
