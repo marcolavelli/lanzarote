@@ -165,10 +165,12 @@
         { name: "Alloggio: Costa Teguise",  lat: 28.9959, lng: -13.4921, day: "Base",          desc: "Il tuo appartamento.",                     dayNum: "0" },
         { name: "Jameos del Agua",          lat: 29.1610, lng: -13.4310, day: "Giorno 2",      desc: "Grotta vulcanica di Manrique.",             dayNum: "2" },
         { name: "Cueva de los Verdes",      lat: 29.1614, lng: -13.4388, day: "Giorno 2",      desc: "Tunnel vulcanico di 1.5 km.",               dayNum: "2" },
+        { name: "Piscine Nat. Punta Mujeres", lat: 29.1438, lng: -13.4452, day: "Giorno 2",    desc: "Vasche vulcaniche per bagno e snorkeling.", dayNum: "2" },
         { name: "Arrieta & Mala",           lat: 29.1433, lng: -13.4600, day: "Giorno 2",      desc: "Pranzo pesce, bufaderos di Mala.",          dayNum: "2" },
         { name: "P.N. Timanfaya",           lat: 29.0033, lng: -13.7547, day: "Giorno 3",      desc: "PRENOTATO 09:30. Montañas del Fuego.",      dayNum: "3" },
         { name: "El Golfo & Clicos",        lat: 28.9818, lng: -13.8290, day: "Giorno 3",      desc: "Il famoso lago verde vulcanico.",            dayNum: "3" },
         { name: "Los Hervideros",           lat: 28.9531, lng: -13.8344, day: "Giorno 3",      desc: "Scogliere laviche frastagliate.",            dayNum: "3" },
+        { name: "Caldera Blanca",           lat: 29.0365, lng: -13.7265, day: "Giorno 4",      desc: "Trekking al cratere vulcanico gigante.",    dayNum: "4" },
         { name: "La Geria (Vigneti)",       lat: 28.9749, lng: -13.7153, day: "Giorno 4",      desc: "Degustazione Malvasia nei crateri.",         dayNum: "4" },
         { name: "Las Grietas",              lat: 28.9723, lng: -13.6288, day: "Giorno 4",      desc: "Canyon lavici spettacolari.",                dayNum: "4" },
         { name: "Puerto del Carmen",        lat: 28.9221, lng: -13.6521, day: "Giorno 4",      desc: "Playa Matagorda e lungomare.",               dayNum: "4" },
@@ -176,6 +178,7 @@
         { name: "Jardín de Cactus",         lat: 29.0805, lng: -13.4795, day: "Giorno 6",      desc: "Ultima opera di Manrique.",                  dayNum: "6" },
         { name: "Rofera de Teseguite",      lat: 29.0494, lng: -13.5226, day: "Giorno 6",      desc: "'Città Stratificata'.",                      dayNum: "6" },
         { name: "Playa de Famara",          lat: 29.1171, lng: -13.5658, day: "Giorno 6",      desc: "Spiaggia immensa e tramonto.",               dayNum: "6" },
+        { name: "Piscine Nat. Famara",      lat: 29.1250, lng: -13.5530, day: "Giorno 6",      desc: "Piscine di lava sotto le scogliere.",       dayNum: "6" },
         { name: "Haría",                    lat: 29.1466, lng: -13.4990, day: "Giorno 7 & 14", desc: "Mercatino artigianale.",                     dayNum: "7" },
         { name: "Volcán de la Corona",      lat: 29.1820, lng: -13.4930, day: "Giorno 7",      desc: "Trekking fino al cratere.",                  dayNum: "7" },
         { name: "Mirador del Río",          lat: 29.2144, lng: -13.4816, day: "Giorno 7",      desc: "Panorama su La Graciosa (475m).",            dayNum: "7" },
@@ -185,11 +188,13 @@
         { name: "Safari Puerto Calero",     lat: 28.9167, lng: -13.7042, day: "Giorno 10",     desc: "PRENOTATO 09:00. Safari in mare.",           dayNum: "10" },
         { name: "Playa Blanca",             lat: 28.8654, lng: -13.8291, day: "Giorno 11",     desc: "Sud dell'isola.",                            dayNum: "11" },
         { name: "Yaiza",                    lat: 28.9542, lng: -13.7667, day: "Giorno 11",     desc: "Villaggio bianco curatissimo.",              dayNum: "11" },
+        { name: "P.N. Los Ajaches",         lat: 28.8800, lng: -13.7800, day: "Giorno 11",     desc: "Massiccio vulcanico panoramico sul mare.",   dayNum: "11" },
         { name: "Punta Papagayo",           lat: 28.8443, lng: -13.7857, day: "Giorno 11",     desc: "Calette turchesi.",                          dayNum: "11" },
         { name: "Porto Fuerteventura",      lat: 28.8624, lng: -13.8322, day: "Giorno 12",     desc: "Traghetto per Corralejo.",                   dayNum: "12" },
         { name: "Corralejo (Fuerteventura)",lat: 28.7360, lng: -13.8670, day: "Giorno 12",     desc: "Centro cittadino e noleggio.",               dayNum: "12" },
         { name: "Pop Corn Beach",           lat: 28.7431, lng: -13.8966, day: "Giorno 12",     desc: "Playa del Bajo de la Burra.",                dayNum: "12" },
         { name: "Dune di Corralejo",        lat: 28.6946, lng: -13.8436, day: "Giorno 12",     desc: "Parco Naturale e deserto di sabbia.",        dayNum: "12" },
+        { name: "El Cotillo (Fuerteventura)",lat: 28.6865, lng: -14.0130, day: "Giorno 12",    desc: "Lagune turchesi e villaggio marinaro.",      dayNum: "12" },
         { name: "Fond. C. Manrique",        lat: 29.0033, lng: -13.5489, day: "Giorno 13",     desc: "Casa museo su bolle vulcaniche.",            dayNum: "13" },
         { name: "Salinas de Janubio",       lat: 28.9372, lng: -13.8247, day: "Giorno 13",     desc: "Saline antiche al tramonto.",                dayNum: "13" }
     ];
@@ -206,33 +211,33 @@
     // Waypoints for daily routes
     const WP = {
         airport:  [28.9455, -13.6052],
-        jameos:   [29.1610, -13.4310], cueva:     [29.1614, -13.4388], arrieta:  [29.1433, -13.4600],
+        jameos:   [29.1610, -13.4310], cueva:     [29.1614, -13.4388], arrieta:  [29.1433, -13.4600], ptamujeres: [29.1438, -13.4452],
         timanfaya:[29.0033, -13.7547], golfo:     [28.9818, -13.8290], hervideros:[28.9531,-13.8344],
-        grietas:  [28.9723, -13.6288], geria:     [28.9749, -13.7153], pdc:      [28.9221, -13.6521],
+        grietas:  [28.9723, -13.6288], geria:     [28.9749, -13.7153], pdc:      [28.9221, -13.6521], calderablanca: [29.0365, -13.7265],
         orzola:   [29.2235, -13.4542],
-        cactus:   [29.0805, -13.4795], teseguite: [29.0494, -13.5226], famara:   [29.1171, -13.5658],
+        cactus:   [29.0805, -13.4795], teseguite: [29.0494, -13.5226], famara:   [29.1171, -13.5658], famaraPiscine: [29.1250, -13.5530],
         haria:    [29.1466, -13.4990], corona:    [29.1820, -13.4930], mirador:  [29.2144, -13.4816],
         teguise:  [29.0594, -13.5599],
         tenesar:  [29.0683, -13.7143], arrecife:  [28.9626, -13.5515],
         calero:   [28.9167, -13.7042],
-        yaiza:    [28.9542, -13.7667], papagayo:  [28.8443, -13.7857], pblanca:  [28.8654, -13.8291],
-        pblancaP: [28.8624, -13.8322], corralejo: [28.7360, -13.8670], popcorn:  [28.7431, -13.8966], dune: [28.6946, -13.8436],
+        yaiza:    [28.9542, -13.7667], papagayo:  [28.8443, -13.7857], pblanca:  [28.8654, -13.8291], ajaches: [28.8800, -13.7800],
+        pblancaP: [28.8624, -13.8322], corralejo: [28.7360, -13.8670], popcorn:  [28.7431, -13.8966], dune: [28.6946, -13.8436], cotillo: [28.6865, -14.0130],
         tahiche:  [29.0033, -13.5489], salinas:   [28.9372, -13.8247]
     };
 
     const dailyRoutes = {
         "1":  [WP.airport, HOME],
-        "2":  [HOME, WP.cueva, WP.jameos, WP.arrieta, HOME],
+        "2":  [HOME, WP.cueva, WP.jameos, WP.ptamujeres, WP.arrieta, HOME],
         "3":  [HOME, WP.timanfaya, WP.golfo, WP.hervideros, HOME],
-        "4":  [HOME, WP.grietas, WP.geria, WP.pdc, HOME],
+        "4":  [HOME, WP.calderablanca, WP.grietas, WP.geria, WP.pdc, HOME],
         "5":  [HOME, WP.orzola, HOME],
-        "6":  [HOME, WP.cactus, WP.teseguite, WP.famara, HOME],
+        "6":  [HOME, WP.cactus, WP.teseguite, WP.famara, WP.famaraPiscine, HOME],
         "7":  [HOME, WP.haria, WP.corona, WP.mirador, HOME],
         "8":  [HOME, WP.teguise, HOME],
         "9":  [HOME, WP.tenesar, WP.arrecife, HOME],
         "10": [HOME, WP.calero, HOME],
-        "11": [HOME, WP.yaiza, WP.papagayo, WP.pblanca, HOME],
-        "12": [HOME, WP.pblancaP, WP.corralejo, WP.popcorn, WP.dune, WP.corralejo, WP.pblancaP, HOME],
+        "11": [HOME, WP.yaiza, WP.ajaches, WP.papagayo, WP.pblanca, HOME],
+        "12": [HOME, WP.pblancaP, WP.corralejo, WP.popcorn, WP.dune, WP.cotillo, WP.corralejo, WP.pblancaP, HOME],
         "13": [HOME, WP.tahiche, WP.salinas, HOME],
         "14": [HOME, WP.haria, HOME],
         "15": [HOME, WP.airport]
@@ -352,12 +357,12 @@
     const select = document.getElementById('day-select');
     
     const dayLabels = {
-        "1": "Giorno 1: Arrivo", "2": "Giorno 2: Jameos & Cueva",
-        "3": "Giorno 3: Timanfaya", "4": "Giorno 4: Vulcani e Vini",
-        "5": "Giorno 5: La Graciosa", "6": "Giorno 6: Cactus & Famara",
+        "1": "Giorno 1: Arrivo", "2": "Giorno 2: Jameos, Cueva & Punta Mujeres",
+        "3": "Giorno 3: Timanfaya & Costa Ovest", "4": "Giorno 4: Caldera Blanca, Vulcani & Vini",
+        "5": "Giorno 5: La Graciosa", "6": "Giorno 6: Cactus, Famara & Piscine",
         "7": "Giorno 7: Haría & Mirador", "8": "Giorno 8: Teguise",
         "9": "Giorno 9: Tenesar & Arrecife", "10": "Giorno 10: Safari Calero",
-        "11": "Giorno 11: Papagayo", "12": "Giorno 12: Fuerteventura",
+        "11": "Giorno 11: Papagayo & Los Ajaches", "12": "Giorno 12: Fuerteventura & El Cotillo",
         "13": "Giorno 13: Manrique & Saline", "14": "Giorno 14: Haría & Nord",
         "15": "Giorno 15: Partenza"
     };
