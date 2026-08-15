@@ -476,6 +476,170 @@
         }
     }
 
+    // --- CALENDAR LOGIC (iOS Style) ---
+    const lockedDays = {
+        18: {
+            dayNum: "3",
+            type: "booking",
+            badge: "🔒 PRENOTAZIONE OBBLIGATORIA · ORE 09:30",
+            reason: "Montañas del Fuego (Timanfaya) – Ingresso confermato ore 09:30.",
+            icon: "🎟️"
+        },
+        22: {
+            dayNum: "7",
+            type: "market",
+            badge: "🔒 MERCATO OBBLIGATORIO · SOLO SABATO",
+            reason: "Mercatino di Haría – Attivo esclusivamente il sabato mattina (09:00 - 14:00).",
+            icon: "🎪"
+        },
+        23: {
+            dayNum: "8",
+            type: "market",
+            badge: "🔒 MERCATO OBBLIGATORIO · SOLO DOMENICA",
+            reason: "Grande Mercato di Teguise – Attivo esclusivamente la domenica mattina (09:00 - 14:00).",
+            icon: "🎪"
+        },
+        25: {
+            dayNum: "10",
+            type: "booking",
+            badge: "🔒 PRENOTAZIONE OBBLIGATORIA · ORE 09:00",
+            reason: "Safari in mare a Puerto Calero – Partenza confermata ore 09:00.",
+            icon: "🐬"
+        }
+    };
+
+    const calGrid = document.getElementById('cal-grid');
+    const calDayDetail = document.getElementById('cal-day-detail');
+
+    function renderDayDetail(dayOfMonth) {
+        if (!calDayDetail) return;
+        const tripIndex = dayOfMonth - 16;
+        if (tripIndex < 0 || tripIndex >= itineraryData.length) return;
+
+        const dayData = itineraryData[tripIndex];
+        const lockedInfo = lockedDays[dayOfMonth];
+        const dayColor = DAY_COLORS[dayData.dayNum] || '#3b82f6';
+
+        calDayDetail.innerHTML = `
+            <div class="day-detail-header">
+                <span class="day-detail-badge" style="background: ${dayColor}">Giorno ${dayData.dayNum}</span>
+                <span class="day-detail-date">${dayData.date}</span>
+            </div>
+            <div class="day-detail-status ${lockedInfo ? 'locked-status' : 'flexible-status'}">
+                <i class="fa-solid ${lockedInfo ? 'fa-lock' : 'fa-circle-check'}"></i>
+                <span>${lockedInfo ? lockedInfo.badge : '🌴 GIORNO LIBERO / FLESSIBILE'}</span>
+            </div>
+            <div class="day-detail-title">${dayData.title}</div>
+            <div class="day-detail-summary">
+                <p><strong>☀️ Mattina:</strong> ${dayData.morning.title}</p>
+                <p style="margin-top:3px;"><strong>⛅ Pomeriggio:</strong> ${dayData.afternoon.title}</p>
+                ${lockedInfo ? `<p style="margin-top:8px; font-weight:600; color:#c2410c;"><i class="fa-solid fa-triangle-exclamation"></i> ${lockedInfo.reason}</p>` : ''}
+            </div>
+            <div class="day-detail-actions">
+                <button class="btn-cal-action btn-cal-itin" onclick="goToDayItinerary('${dayData.dayNum}')">
+                    <i class="fa-solid fa-list-check"></i> Apri in Itinerario
+                </button>
+                <button class="btn-cal-action btn-cal-map" onclick="showRouteOnMap('${dayData.dayNum}')">
+                    <i class="fa-solid fa-route"></i> Mappa Giorno ${dayData.dayNum}
+                </button>
+            </div>
+        `;
+    }
+
+    function initCalendar() {
+        if (!calGrid) return;
+        calGrid.innerHTML = '';
+
+        // August 2026 starts on Saturday (5 empty slots for Mon-Fri)
+        for (let i = 0; i < 5; i++) {
+            const emptyCell = document.createElement('div');
+            emptyCell.className = 'cal-day-cell empty';
+            calGrid.appendChild(emptyCell);
+        }
+
+        // Days 1 to 31 of August 2026
+        for (let day = 1; day <= 31; day++) {
+            const cell = document.createElement('div');
+            cell.className = 'cal-day-cell';
+            cell.setAttribute('data-day-month', day);
+
+            const isTrip = (day >= 16 && day <= 30);
+            const lockedInfo = lockedDays[day];
+
+            if (isTrip) {
+                const tripDayNum = (day - 15);
+                cell.classList.add('trip-day');
+
+                if (lockedInfo) {
+                    cell.classList.add('locked-day');
+                    if (lockedInfo.type === 'booking') cell.classList.add('is-booking');
+                    if (lockedInfo.type === 'market')  cell.classList.add('is-market');
+                }
+
+                cell.innerHTML = `
+                    <span class="cal-num">${day}</span>
+                    <span class="cal-sub">G${tripDayNum}</span>
+                    ${lockedInfo ? '<span class="cal-locked-dot"></span>' : ''}
+                `;
+
+                cell.addEventListener('click', () => {
+                    document.querySelectorAll('.cal-day-cell').forEach(c => c.classList.remove('selected'));
+                    cell.classList.add('selected');
+                    renderDayDetail(day);
+                });
+            } else {
+                cell.classList.add('non-trip');
+                cell.innerHTML = `<span class="cal-num">${day}</span>`;
+            }
+
+            calGrid.appendChild(cell);
+        }
+
+        // Default select Day 1 (16 August)
+        selectCalendarDay(16);
+    }
+
+    window.selectCalendarDay = function(dayOfMonth) {
+        // Ensure Calendar tab is active
+        const navCal = document.getElementById('nav-calendar');
+        if (navCal && !navCal.classList.contains('active')) {
+            navCal.click();
+        }
+
+        setTimeout(() => {
+            const cells = document.querySelectorAll('.cal-day-cell');
+            cells.forEach(c => {
+                if (c.getAttribute('data-day-month') == dayOfMonth) {
+                    cells.forEach(el => el.classList.remove('selected'));
+                    c.classList.add('selected');
+                    renderDayDetail(dayOfMonth);
+                }
+            });
+        }, 50);
+    };
+
+    window.goToDayItinerary = function(dayNum) {
+        // Switch to itinerary tab
+        document.getElementById('nav-itinerary').click();
+
+        setTimeout(() => {
+            const card = document.querySelector(`.card[data-day="${dayNum}"]`);
+            if (card) {
+                card.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                card.style.transition = 'box-shadow 0.3s, transform 0.3s';
+                card.style.transform = 'scale(1.02)';
+                card.style.boxShadow = '0 0 0 3px #3b82f6, var(--shadow-lg)';
+                setTimeout(() => {
+                    card.style.transform = '';
+                    card.style.boxShadow = '';
+                }, 1200);
+            }
+        }, 150);
+    };
+
+    // Initialize calendar immediately
+    initCalendar();
+
     // --- GLOBAL: showRouteOnMap (from itinerary cards) ---
     window.showRouteOnMap = function(dayNum) {
         // Switch to map tab
@@ -489,3 +653,4 @@
     };
 
 })();
+
