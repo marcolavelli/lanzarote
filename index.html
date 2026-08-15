@@ -30,12 +30,18 @@
                 <h1>🏝️ Lanzarote 2026</h1>
                 <p class="header-subtitle">16 – 30 Agosto · 15 Giorni</p>
             </div>
-            <div class="header-countdown" id="countdown">
-                <div class="countdown-unit"><span id="cd-days">--</span><small>giorni</small></div>
-                <div class="countdown-sep">:</div>
-                <div class="countdown-unit"><span id="cd-hours">--</span><small>ore</small></div>
-                <div class="countdown-sep">:</div>
-                <div class="countdown-unit"><span id="cd-mins">--</span><small>min</small></div>
+            <div class="header-right">
+                <div class="header-countdown" id="countdown">
+                    <div class="countdown-unit"><span id="cd-days">--</span><small>giorni</small></div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-unit"><span id="cd-hours">--</span><small>ore</small></div>
+                    <div class="countdown-sep">:</div>
+                    <div class="countdown-unit"><span id="cd-mins">--</span><small>min</small></div>
+                </div>
+                <a href="Guida_Viaggio_Lanzarote_2026.pdf" download="Guida_Viaggio_Lanzarote_2026.pdf" class="btn-header-pdf" title="Scarica Guida PDF">
+                    <i class="fa-solid fa-file-pdf"></i>
+                    <span>PDF</span>
+                </a>
             </div>
         </div>
     </header>
@@ -66,6 +72,121 @@
                 <small>Prova con un termine diverso</small>
             </div>
             <div class="footer-spacer"></div>
+        </div>
+
+        <!-- VIEW: Calendar (iOS style) -->
+        <div id="view-calendar" class="view">
+            <div class="calendar-container">
+                <!-- iOS Calendar Month Card -->
+                <div class="ios-calendar-card">
+                    <div class="cal-month-header">
+                        <div class="cal-month-title">
+                            <h2>Agosto 2026</h2>
+                            <span class="cal-badge-trip">16 – 30 Ago · 15 Giorni</span>
+                        </div>
+                        <div class="cal-legend-mini">
+                            <span class="legend-item"><span class="legend-dot locked-dot"></span> Obbligatori</span>
+                            <span class="legend-item"><span class="legend-dot trip-dot"></span> Vacanza</span>
+                        </div>
+                    </div>
+
+                    <!-- Weekdays -->
+                    <div class="cal-weekdays">
+                        <span>L</span><span>M</span><span>M</span><span>G</span><span>V</span><span>S</span><span>D</span>
+                    </div>
+
+                    <!-- Month Grid -->
+                    <div class="cal-grid" id="cal-grid">
+                        <!-- Populated dynamically by JS -->
+                    </div>
+                </div>
+
+                <!-- Selected Day Detail Card -->
+                <div class="cal-selected-day-card" id="cal-day-detail">
+                    <!-- Populated dynamically by JS on day tap -->
+                </div>
+
+                <!-- Mandatory / Fixed Days Section -->
+                <div class="cal-locked-section">
+                    <div class="cal-section-header">
+                        <h3>🔒 Giorni Obbligatori da Rispettare</h3>
+                        <span class="cal-subcount">4 date fisse</span>
+                    </div>
+                    <p class="cal-section-desc">Date vincolate da orari di prenotazione o giorni unici di mercato.</p>
+
+                    <div class="locked-cards-list">
+                        <!-- 18 Ago - Timanfaya -->
+                        <div class="locked-item locked-timanfaya" onclick="selectCalendarDay(18)">
+                            <div class="locked-date-badge">
+                                <span class="locked-day-num">18</span>
+                                <span class="locked-day-name">MAR</span>
+                            </div>
+                            <div class="locked-content">
+                                <div class="locked-header-row">
+                                    <span class="badge-tag booking">🎟️ PRENOTATO · ORE 09:30</span>
+                                    <span class="locked-day-tag">Giorno 3</span>
+                                </div>
+                                <h4>Montañas del Fuego (Timanfaya)</h4>
+                                <p>Ingresso confermato ore 09:30. Tour vulcanico sui bus del parco. Arrivare 15 min prima.</p>
+                            </div>
+                            <i class="fa-solid fa-chevron-right locked-arrow"></i>
+                        </div>
+
+                        <!-- 22 Ago - Mercato Haría -->
+                        <div class="locked-item locked-haria" onclick="selectCalendarDay(22)">
+                            <div class="locked-date-badge">
+                                <span class="locked-day-num">22</span>
+                                <span class="locked-day-name">SAB</span>
+                            </div>
+                            <div class="locked-content">
+                                <div class="locked-header-row">
+                                    <span class="badge-tag market">🎪 MERCATO · SOLO SABATO</span>
+                                    <span class="locked-day-tag">Giorno 7</span>
+                                </div>
+                                <h4>Mercatino Tradizionale di Haría</h4>
+                                <p>Artigianato e prodotti tipici nella Valle delle 1000 Palme. Attivo solo sabato 09:00–14:00.</p>
+                            </div>
+                            <i class="fa-solid fa-chevron-right locked-arrow"></i>
+                        </div>
+
+                        <!-- 23 Ago - Mercato Teguise -->
+                        <div class="locked-item locked-teguise" onclick="selectCalendarDay(23)">
+                            <div class="locked-date-badge">
+                                <span class="locked-day-num">23</span>
+                                <span class="locked-day-name">DOM</span>
+                            </div>
+                            <div class="locked-content">
+                                <div class="locked-header-row">
+                                    <span class="badge-tag market">🎪 MERCATO · SOLO DOMENICA</span>
+                                    <span class="locked-day-tag">Giorno 8</span>
+                                </div>
+                                <h4>Grande Mercato Storico di Teguise</h4>
+                                <p>Il mercato più celebre e animato delle Canarie. Attivo esclusivamente la domenica 09:00–14:00.</p>
+                            </div>
+                            <i class="fa-solid fa-chevron-right locked-arrow"></i>
+                        </div>
+
+                        <!-- 25 Ago - Safari Puerto Calero -->
+                        <div class="locked-item locked-safari" onclick="selectCalendarDay(25)">
+                            <div class="locked-date-badge">
+                                <span class="locked-day-num">25</span>
+                                <span class="locked-day-name">MAR</span>
+                            </div>
+                            <div class="locked-content">
+                                <div class="locked-header-row">
+                                    <span class="badge-tag safari">🐬 PRENOTATO · ORE 09:00</span>
+                                    <span class="locked-day-tag">Giorno 10</span>
+                                </div>
+                                <h4>Safari in Mare a Puerto Calero</h4>
+                                <p>Esperienza safari in mare alle 09:00 con partenza dal molo turistico di Puerto Calero.</p>
+                            </div>
+                            <i class="fa-solid fa-chevron-right locked-arrow"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="footer-spacer"></div>
+            </div>
         </div>
 
         <!-- VIEW: Map -->
@@ -251,6 +372,22 @@
         <!-- VIEW: Info -->
         <div id="view-info" class="view">
             <div class="info-container">
+                <!-- PDF Download Card -->
+                <div class="info-card pdf-download-card">
+                    <div class="pdf-card-inner">
+                        <div class="pdf-icon-wrap">
+                            <i class="fa-solid fa-file-pdf"></i>
+                        </div>
+                        <div class="pdf-card-text">
+                            <h3>Guida Completa in PDF</h3>
+                            <p>Scarica la presentazione completa (9 pagine) con tutti gli itinerari, mappe, calendario e approfondimenti.</p>
+                        </div>
+                    </div>
+                    <a href="Guida_Viaggio_Lanzarote_2026.pdf" download="Guida_Viaggio_Lanzarote_2026.pdf" class="btn-download-pdf">
+                        <i class="fa-solid fa-download"></i> Scarica PDF Presentazione (5.7 MB)
+                    </a>
+                </div>
+
                 <h2 class="info-title"><i class="fa-solid fa-circle-info"></i> Info Pratiche</h2>
                 
                 <div class="info-card">
@@ -305,8 +442,12 @@
     <!-- Bottom Navigation -->
     <nav class="bottom-nav" id="bottom-nav">
         <button class="nav-item active" data-target="view-itinerary" id="nav-itinerary">
-            <i class="fa-solid fa-calendar-days"></i>
+            <i class="fa-solid fa-route"></i>
             <span>Itinerario</span>
+        </button>
+        <button class="nav-item" data-target="view-calendar" id="nav-calendar">
+            <i class="fa-solid fa-calendar-days"></i>
+            <span>Calendario</span>
         </button>
         <button class="nav-item" data-target="view-map" id="nav-map">
             <i class="fa-solid fa-map-location-dot"></i>
