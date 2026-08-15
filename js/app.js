@@ -47,9 +47,9 @@
             dayNum: "2", date: "17 Ago (Lun)", area: "north",
             title: "🌋 JAMEOS DEL AGUA & CUEVA DE LOS VERDES",
             morning: { title: "Grotte Vulcaniche", desc: "Partenza ore 09:30. Cueva de los Verdes: tunnel vulcanico spettacolare. A seguire Jameos del Agua: grotta trasformata da Manrique." },
-            afternoon: { title: "Condotti di Lava & Arrieta", desc: "Esplorazione dei bufaderos e condotti di lava di Mala. Poi Playa de la Garita ad Arrieta per bagno e snorkeling." },
+            afternoon: { title: "Condotti di Lava, Arrieta & Punta Mujeres", desc: "Esplorazione dei bufaderos e condotti di lava di Mala. Poi Playa de la Garita ad Arrieta per bagno. A seguire <strong>Piscine Naturali di Punta Mujeres</strong>: vasche vulcaniche nell'oceano, acqua cristallina, ideali per snorkeling." },
             evening: "Cena ad Arrieta (chiringuitos pesce fresco).",
-            note: "Jameos e Cueva: biglietto combo disponibile. Arrieta è a 5 min da Jameos."
+            note: "Jameos e Cueva: biglietto combo disponibile. Punta Mujeres è a 5 min da Arrieta, parcheggio gratuito. Le piscine naturali si visitano con la bassa marea."
         },
         {
             dayNum: "3", date: "18 Ago (Mar)", area: "west",
@@ -61,11 +61,11 @@
         },
         {
             dayNum: "4", date: "19 Ago (Mer)", area: "center",
-            title: "🍷 VULCANI E VINI",
-            morning: { title: "Las Grietas & La Geria", desc: "Esplorazione di Las Grietas (sulla LZ-35). A seguire La Geria: viti nei crateri. Degustazione in Bodega (es. El Grifo)." },
-            afternoon: { title: "Puerto del Carmen", desc: "Relax nella spiaggia più lunga dell'isola (4 km). Lungomare animato, gelato artigianale." },
+            title: "🍷 VULCANI, VINI & CALDERA BLANCA",
+            morning: { title: "Caldera Blanca & Las Grietas", desc: "Trekking alla <strong>Caldera Blanca</strong> (nella zona La Geria): il cratere vulcanico più imponente dell'isola, circondata da lava e viti. Percorso ad anello ~7 km, panorama mozzafiato. A seguire esplorazione di Las Grietas (sulla LZ-35)." },
+            afternoon: { title: "La Geria & Puerto del Carmen", desc: "La Geria: viti nei crateri vulcanici. Degustazione in Bodega (es. El Grifo). Poi relax a Puerto del Carmen (4 km di spiaggia)." },
             evening: "Cena a Puerto del Carmen (vasta scelta).",
-            note: "Las Grietas: parcheggio bordo strada. Bodegas: prenotare degustazione online (~15€)."
+            note: "Caldera Blanca: scarpe da trekking obbligatorie, portare acqua. Partenza presto per evitare il calore. Bodegas: prenotare degustazione online (~15€)."
         },
         {
             dayNum: "5", date: "20 Ago (Gio)", area: "graciosa",
@@ -77,11 +77,11 @@
         },
         {
             dayNum: "6", date: "21 Ago (Ven)", area: "north",
-            title: "🌵 JARDÍN DE CACTUS & FAMARA",
+            title: "🌵 JARDÍN DE CACTUS, FAMARA & PISCINE",
             morning: { title: "Cactus e Città Stratificata", desc: "Jardín de Cactus a Guatiza (opera di Manrique). Poi Rofera de Teseguite, paesaggio astratto di roccia." },
-            afternoon: { title: "Playa de Famara al tramonto", desc: "Spiaggia immensa e selvaggia ai piedi delle scogliere. Ideale per surf e tramonto favoloso." },
+            afternoon: { title: "Famara: Piscine Naturali & Tramonto", desc: "<strong>Piscine naturali di Famara</strong>: vasche di lava sul bordo dell'oceano ai piedi delle scogliere, perfette per il bagno anche quando il mare è mosso. Poi la spiaggia immensa per il tramonto." },
             evening: "Cena a Caleta de Famara vista oceano.",
-            note: "Rofera: esplorare a piedi le formazioni. Famara: attenzione correnti."
+            note: "Rofera: esplorare a piedi le formazioni. Le piscine naturali di Famara si trovano a nord della spiaggia, raggiungibili a piedi (20 min). Famara: attenzione correnti in mare aperto."
         },
         {
             dayNum: "7", date: "22 Ago (Sab)", area: "north",
@@ -117,19 +117,19 @@
         },
         {
             dayNum: "11", date: "26 Ago (Mer)", area: "south",
-            title: "🏝️ SUD DELL'ISOLA E PAPAGAYO",
-            morning: { title: "Yaiza & Faro Pechiguera", desc: "Mattina a Yaiza (villaggio bianco curatissimo). Passeggiata fino al faro." },
-            afternoon: { title: "Punta Papagayo", desc: "Riserva naturale. Calette turchesi perfette per snorkeling (Playa Mujeres, Papagayo)." },
+            title: "🏝️ SUD: PAPAGAYO & LOS AJACHES",
+            morning: { title: "Los Ajaches & Yaiza", desc: "Mattina a Yaiza (villaggio bianco curatissimo). Poi trekking nel <strong>Parco Naturale Los Ajaches</strong>: montagne vulcaniche che scendono direttamente sul mare, con vedute spettacolari sulle calette di Papagayo." },
+            afternoon: { title: "Punta Papagayo", desc: "Riserva naturale. Calette turchesi perfette per snorkeling (Playa Mujeres, Papagayo, El Pozo). Los Ajaches fa da sfondo naturale alle spiagge." },
             evening: "Cena a Playa Blanca lungomare.",
-            note: "Papagayo: 3€ a veicolo. Strada sterrata. Arrivare presto."
+            note: "Los Ajaches: sentiero consigliato dal Mirador de las Breñas. Papagayo: 3€ a veicolo, strada sterrata. Scarpe comode per entrambi. Arrivare presto alle calette."
         },
         {
             dayNum: "12", date: "27 Ago (Gio)", area: "south",
             title: "⛴️ ESCURSIONE A FUERTEVENTURA",
-            morning: { title: "Traghetto da Playa Blanca", desc: "Partenza 07:00 verso sud. Traghetto per Corralejo (~35 min). Visita centro cittadino." },
-            afternoon: { title: "Dune di Corralejo & Pop Corn Beach", desc: "Parco Naturale Dune: deserto bianco. Bagno alle Grandes Playas. Playa del Bajo de la Burra." },
+            morning: { title: "Traghetto & Corralejo", desc: "Partenza 07:00 verso sud. Traghetto per Corralejo (~35 min). Visita centro cittadino, mercato e lungomare." },
+            afternoon: { title: "Dune, Pop Corn Beach & El Cotillo", desc: "<strong>Dune di Corralejo</strong>: Parco Naturale con deserto di sabbia bianca. Bagno alle Grandes Playas. Nel pomeriggio, se l'energia lo consente, puntare verso <strong>El Cotillo</strong> (30 min a nord): pittoresco villaggio di pescatori con le famose lagune turchesi e la spiaggia selvaggia di El Cotillo." },
             evening: "Traghetto di rientro. Cena a Playa Blanca.",
-            note: "Portare Documento di Identità valido per il traghetto!"
+            note: "Portare Documento di Identità valido per il traghetto! El Cotillo è a 30 min da Corralejo: valutare i tempi. Lagune di El Cotillo perfette per bambini (acqua calma e poco profonda)."
         },
         {
             dayNum: "13", date: "28 Ago (Ven)", area: "center",
